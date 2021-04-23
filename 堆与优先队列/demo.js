@@ -23,4 +23,13 @@ var lastStoneWeight = function (stones) {
   };
   return f(q);
 };
-console.log(lastStoneWeight(tmp));
+
+
+let heap = new queue.PriorityQueue(false);
+heap.build([3,2,3,1,2,4,5,5,6]);
+console.log('长度',heap.length());
+const length = heap.length();
+for(let i=0; i<length; i++){
+  console.log(heap.shift());
+}
+

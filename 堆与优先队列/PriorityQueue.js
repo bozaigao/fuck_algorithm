@@ -57,10 +57,8 @@ class PriorityQueue {
         r = l + 1;
       if (
         this.bigHeap
-          ? (this.data[l] ? this.data[l] : -Infinity) >=
-            (this.data[r] ? this.data[r] : -Infinity)
-          : (this.data[l] ? this.data[l] : -Infinity) <=
-              (this.data[r] ? this.data[r] : -Infinity) || !this.data[r]
+          ? this.data[l] >= (this.data[r] ? this.data[r] : -Infinity)
+          : this.data[l] <= this.data[r] || !this.data[r]
       ) {
         max = this.data[l];
         maxIndex = l;
