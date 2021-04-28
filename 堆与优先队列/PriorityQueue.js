@@ -16,11 +16,9 @@ class PriorityQueue {
   }
 
   shift() {
-    let tmp = this.data.shift();
-    if (this.data.length) {
-      this.data.unshift(this.data.pop());
-      this.down(0);
-    }
+    let tmp = this.data[0];
+    this.data[0] = this.data.pop();
+    this.down(0);
 
     return tmp;
   }
